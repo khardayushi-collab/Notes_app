@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navBlock{
+    height: 80px;
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navBlock .head{
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#navBlock .imgBlock img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.mainBlock{
+    width: 95%;
+    gap: 40px;
+    display: flex;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.formBlock{
+    width: 400px;
+    background-color: coral;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 15px black;
+    margin: 40px 30px;
+}
+
+.formBlock h1{
+    text-align: center;
+    font-size: 30px;
+    color: indigo;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.formBlock div{
+    margin-bottom: 20px;
+}
+.formBlock label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.formBlock input, .formBlock textarea, .formBlock select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #eeeeee;
+}
+.formBlock textarea{
+    height: 150px;
+    resize: none;
+
+}
+
+.btnBlock{
+display: flex;
+justify-content: center;
+}
+
+.btnBlock button:hover{
+    background-color: darkblue;
+}
+
+.btnBlock button{
+    padding: 15px 40px;
+    border-radius: 10px;
+    background-color: rgba(14, 14, 236, 0.775);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.35;
+}
+
+.todoContainer{
+    flex: 1;
+}
+
+.categoryBlock{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    display: flex;
+    gap: 10px;
+    margin: 40px 0px;
+    font-size: 23px;
+    text-transform: capitalize;
+}
+
+.categoryBlock label{
+    font-weight: bold;
+}
+
+.notesBlock{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+
+}
+
+.notesCard{
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 0 15px black;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.notesCard:hover{
+    transform: translateY(-5px);
+}
+
+.notesCard h2, .notesCard h3{
+    color: blue;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.notesCard p{
+     margin-bottom: 15px;
+     line-height: 1.5;
+}
+.actionBtn{
+    display: flex;
+    gap: 20px;
+}
+
+.actionBtn button{
+    flex: 1;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+
+.edit{
+    background-color: rgba(11, 137, 11, 0.622);
+}
+
+.delete{
+    background-color: rgba(155, 44, 44, 0.678);
+}
+
+.edit:hover{
+    background-color: green;
+
+}
+
+.delete:hover{
+    background-color: red;
+}
