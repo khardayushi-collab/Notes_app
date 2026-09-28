@@ -7,8 +7,9 @@ import TaskContext from "./context/TaskContext"
 const App = () => {
   return (
     <>
-      <Navbar/>
+      
       <TaskContext>
+        <Navbar/>
       <main className='mainBlock'>
         <FormContainer/>
         <TodoList/>

@@ -11,36 +11,51 @@ const FormContainer = () => {
     handleSubmit,
   } = data;
 
+
+
   const formId = useId();
 
   return (
     <>
       <section className="formBlock">
         <form onSubmit={handleSubmit}>
-          <div>
-            <h1>Take notes below</h1>
-          </div>
-          <div>
-            <label htmlFor={formId + "title"}>Title : </label>
+          <div className="formHeader">
+
+                    <div className="formIcon">
+                        ✎
+                    </div>
+                    <div>
+                        <h1>
+                            Take Notes
+                        </h1>
+                        <p>
+                            Capture your ideas, tasks and thoughts
+                        </p>
+                    </div>
+                </div>
+          <div className="formGroup">
+            <label htmlFor={formId + "-title"}>Title : </label>
             <input 
               type="text" 
-              id={formId + "title"} 
+              id={formId + "-title"} 
+              placeholder="Enter note title..."
               name="title" 
               value={title} 
               onChange={handleChange}/>
           </div>
-          <div>
+          <div className="formGroup">
             <label htmlFor={formId + "desc"}>Description : </label>
             <textarea
               id={formId + "desc"}
               cols={30}
               rows={10}
               name="description"
+              placeholder="Write your note here..."
               value={description}
               onChange={handleChange}
             ></textarea>
           </div>
-          <div>
+          <div className="formGroup">
             <label htmlFor={formId + "cat"}>Category : </label>
             <select name="category" value={category} id={formId + "cat"} onChange={handleChange}>
               <option value="" disabled>
@@ -52,7 +67,9 @@ const FormContainer = () => {
             </select>
           </div>
           <div className="btnBlock">
-            <button>SUBMIT</button>
+            <button type="submit">
+               <span> + </span> Add Note
+            </button>
           </div>
         </form>
       </section>

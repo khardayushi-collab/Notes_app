@@ -41,6 +41,12 @@ const TaskContext = (props) => {
      selected: "all"
     })
 
+    const [searchText, setSearchText] = useState("");
+
+    const handleSearch = (e) => {
+    setSearchText(e.target.value);
+};
+
     //? to detect the change in choosen category
     const handleSelectedCategory=(e)=>{
      const {name, value}= e.target
@@ -103,7 +109,16 @@ const TaskContext = (props) => {
     //? step2: COntext provider- wrap the consumer by context provider
 
   return (
-   <TaskApi.Provider value={{formData, handleChange, handleSubmit, selectedCategory, handleSelectedCategory,multiNotes,handleDelete,handleEdit}}>
+   <TaskApi.Provider value={{formData,
+                             handleChange,
+                              handleSubmit,
+                              selectedCategory, 
+                              handleSelectedCategory,
+                              multiNotes,
+                              handleDelete,
+                              handleEdit,
+                              searchText,
+                              handleSearch}}>
     {props.children}
    </TaskApi.Provider>
   )
